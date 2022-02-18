@@ -1,0 +1,15 @@
+source_file_add:
+  class: File
+  path: data/comp.py
+
+source_file_merge:
+  class: File
+  path: data/merge.py
+
+input_file1:
+  class: File
+  path: data/add1.csv
+
+input_file2:
+  class: File
+  path: data/add2.csv

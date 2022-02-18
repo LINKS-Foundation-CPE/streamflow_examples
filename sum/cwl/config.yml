@@ -1,0 +1,7 @@
+source_file:
+  class: File
+  path: data/comp.py
+
+input_file:
+  class: File
+  path: data/add.csv

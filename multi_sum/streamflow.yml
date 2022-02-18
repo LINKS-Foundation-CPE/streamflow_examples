@@ -1,0 +1,28 @@
+#!/usr/bin/env streamflow
+version: v1.0
+workflows:
+  master:
+    type: cwl
+    config:
+      file: cwl/main.cwl
+      settings: cwl/config.yml
+    bindings:
+      - step: /add1
+        target:
+          model: ssh
+      - step: /add2
+        target:
+          model: ssh
+      - step: /merge
+        target:
+          model: ssh
+      - step: /add3
+        target:
+          model: ssh
+models:
+  ssh:
+    type: ssh
+    config:
+      nodes:
+        - hostname: localhost
+      username: user
